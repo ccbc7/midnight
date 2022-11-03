@@ -29,5 +29,13 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+ja:
+  activerecord:
+    models:
+      plan: プラン
+    attributes:
+      plan:
+        title: タイトル
+        StartDay: 開始日
+        EndDay: 終了日
+        memo: スケジュールメモ
