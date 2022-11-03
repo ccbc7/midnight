@@ -59,5 +59,7 @@ gem "net-smtp"
 
 gem 'rack-cors'
 
-  gem 'hirb' # hirb本体
-  gem 'hirb-unicode' 
+gem 'hirb' # hirb本体
+gem 'hirb-unicode'
+
+gem 'rails-i18n'
