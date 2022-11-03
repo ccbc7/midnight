@@ -1,9 +1,10 @@
 class Plan < ApplicationRecord
   validate :start_end_check
   def start_end_check
-    errors.add(:EndDay, "は開始日より前の日付は登録できません。")
-    if
-    self.StartDay ==! nil && self.EndDay ==! nil && self.StartDay > self.EndDay
+    unless
+      self.StartDay && self.EndDay &&
+      self.StartDay < self.EndDay
+      errors.add(:EndDay, "は開始日より前の日付は登録できません。")
     end
   end
   validates :title, presence: true
