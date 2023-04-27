@@ -1,5 +1,5 @@
 <h3>スケジュール編集</h3>
-
+<%= render "shared/error" , obj: @plan %>
 <%= form_with model: @plan do |f| %>
   <table>
     <tr>
@@ -34,7 +34,6 @@
         <%= f.check_box :AllDay %>
       </td>
     </tr>
-
     <tr>
       <th>
         <%= f.label :memo ,"スケジュールメモ" %>
@@ -43,11 +42,7 @@
         <%= f.text_area :memo %>
       </td>
     </tr>
-
-
   </table>
-
-
 
   <div>
     <p>

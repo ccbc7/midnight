@@ -1,5 +1,5 @@
 <h3>スケジュール新規作成</h3>
-
+<%= render "shared/error" , obj: @plan %>
 <%= form_with model: @plan do |f| %>
   <table>
     <tr>
@@ -13,7 +13,7 @@
 
     <tr>
       <th>
-        <%= f.label :S ,"開始日" %>
+        <%= f.label :StartDay ,"開始日" %>
       </th>
       <td>
         <%= f.date_field :StartDay %>
@@ -22,7 +22,7 @@
 
     <tr>
       <th>
-        <%= f.label :E ,"終了日" %>
+        <%= f.label :EndDay ,"終了日" %>
       </th>
       <td>
         <%= f.date_field :EndDay %>
