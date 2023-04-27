@@ -1,0 +1,66 @@
+<h3>スケジュール新規作成</h3>
+
+<%= form_with model: @plan do |f| %>
+  <table>
+    <tr>
+      <th>
+        <%= f.label :title ,"タイトル" %>
+      </th>
+      <td>
+        <%= f.text_field :title %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <%= f.label :S ,"開始日" %>
+      </th>
+      <td>
+        <%= f.date_field :StartDay %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <%= f.label :E ,"終了日" %>
+      </th>
+      <td>
+        <%= f.date_field :EndDay %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <%= f.label :AllDay ,"終日" %>
+      </th>
+      <td>
+        <div class="check_box">
+          <%= f.check_box :AllDay %>
+          <p>終日の場合はチェックを入れます</p>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <%= f.label :memo ,"スケジュールメモ" %>
+      </th>
+        <td>
+          <%= f.text_area :memo %>
+        </td>
+    </tr>
+  </table>
+
+  <div>
+    <p>
+      <%= f.submit "登録完了する" %>
+    </p>
+    <p>
+      <%= link_to "ユーザー情報一覧に戻る" , :plans %>
+    </p>
+
+
+  </div>
+  <% end %>
+
+<!-- <p>test</p> -->
